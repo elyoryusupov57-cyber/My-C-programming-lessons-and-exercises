@@ -1,11 +1,19 @@
-#include <iostream>
-#include "guessing.h" // Included the header for game functions
+#include <iostream> 
+#include <string>    
+#include <ctime>     
+#include <cstdlib>  
 
-using namespace std;
+// Function for showing  progress of the guessed word
+void showing(const std::string& word, const std::string& progress);
 
-int main() {
-    startGame();      // Launching the main game loop
-    system("pause");  
-    return 0;        
-}
+//  gets a letter guess from the guesser
+char getguess();
 
+//   updates the progress of the guessed word based on the guesser's guess
+bool nextword(const std::string& word, std::string& progress, char guess);
+
+// Main game function 
+void startGame();
+
+
+	
